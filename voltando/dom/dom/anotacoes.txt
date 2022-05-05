@@ -1,0 +1,59 @@
+
+- elementos 
+coisa.nodeType -> 1 = elemento, 2 = attr, 3 = text
+coisa.nodeName -> nome do elemento
+
+- atributos
+const src = img.getAttributeNode('src') // vai pegar o nó que existe outras propriedades nele
+src.nodeType
+src.nodeName
+src.nodeValue
+
+---------------------------
+
+atributos personalizados
+
+data-id=4 no html de algum elemento
+como pegar no javascript?
+elemento.dateset.id
+
+
+
+pegando atributos de um elemento ()
+- somente leitura
+
+div.attributes
+div.attributes[0]
+div.attributes.status
+div.attributes['destino']
+
+-------------------------
+
+clonar elementos html
+true = clonagem profunda (inclui os filhos)
+false = não inclui os filhos
+
+const div4 = div.cloneNode(true)
+
+-------------------------
+
+Outras funções
+adiconar um elemento hmtl 
+
+elemento.insertAdjacentHTML('beforebegin', '<p>Antes de começar</p>')
+
+elemento.insertAdjacentHTML('afterbegin', '<p>Depois de começar</p>')
+
+elemento.insertAdjacentHTML('beforeend', '<p>Antes de terminar</p>')
+
+elemento.insertAdjacentHTML('afterend', '<p>Depois de terminar</p>')
+
+-----------------------------------------
+é um iterador
+const FormData = new FormData(form)
+
+FormData.append('status', 'online')
+FormData.get('q')
+FormData.has('user')
+
+

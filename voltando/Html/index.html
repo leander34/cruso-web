@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documento HTML</title>
+</head>
+<body>
+  <header>
+    <h1>Exercícios HTML</h1>
+  </header>
+
+  <main>
+    <nav>
+      <a href="exercicios/text.html">00- TESTE</a> |
+      <a href="exercicios/lista-alinhadas.html">listas-alinhadas</a> |
+      <a href="exercicios/tabela.html">Tabela</a> |
+      <a href="exercicios/form/form.html">Formulário</a> |
+      <a href="exercicios/imagens.html">Imagens</a> |
+      <a href="exercicios/video.html">vídeo</a> |
+    </nav>
+
+    <section id="content">
+
+    </section>
+  </main>
+  <br>
+  <br>
+  <footer>
+    Feito por Leander
+  </footer>
+
+  <script>
+    document.querySelectorAll('a').forEach(a => {
+      const content = document.querySelector('#content')
+      a.addEventListener('click', event => {
+        event.preventDefault()
+        fetch(a.href).then(resp => resp.text()).then(html => content.innerHTML = html)
+      })
+    })
+  </script>
+</body>
+</html>
